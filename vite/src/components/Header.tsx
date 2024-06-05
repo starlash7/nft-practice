@@ -45,7 +45,7 @@ const Header: FC<HeaderProps> = ({ signer, setSigner, setMintContract }) => {
 
     setMintContract(
       new Contract(
-        "0x8e1776b18fbdCb6CE5Bb04ffe91645f0Bab8EDBe",
+        "0xeec70e7aE45932BB3174bf101f14B3028cD1E26A",
         mintAbi,
         signer
       )

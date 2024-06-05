@@ -6,7 +6,8 @@ import { JsonRpcSigner } from "ethers";
 import { Contract } from "ethers";
 
 export interface OutletContext {
-  mintContract: Contract;
+  mintContract: Contract | null;
+  signer: JsonRpcSigner | null;
 }
 
 const Layout: FC = () => {
@@ -21,7 +22,7 @@ const Layout: FC = () => {
         setMintContract={setMintContract}
       />
       <Flex flexGrow={1}>
-        <Outlet context={{ mintContract }} />
+        <Outlet context={{ mintContract, signer }} />
       </Flex>
     </Flex>
   );
